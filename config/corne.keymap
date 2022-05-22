@@ -25,6 +25,7 @@
             tapping-term-ms = <170>;
             quick-tap-ms = <125>;
             flavor = "tap-preferred";
+            global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
     };
@@ -35,7 +36,7 @@
         keymap {
                 compatible = "zmk,keymap";
 
-                default_layer {
+                DEFAULT {
 // -----------------------------------------------------------------------------------------
 //                               |  MIN |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  '  | PLUS |
 //                               | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |  ;   |
