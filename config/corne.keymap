@@ -26,7 +26,7 @@
             quick-tap-ms = <125>;
             flavor = "tap-preferred";
             global-quick-tap;
-            hold-trigger-key-positions;
+            hold-trigger-key-positions = <0>;
             bindings = <&kp>, <&kp>;
         };
     };
@@ -39,12 +39,12 @@
 
                 DEFAULT {
 // -----------------------------------------------------------------------------------------
-//                               |  MIN |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  '  | PLUS |
+//                               |  MIN |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  '  | EQL  |
 //                               | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |  ;   |
 //                               |  (   |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  |  )   |
 //                                                  | TAB | BSP | DEL |   | ESC | SPC  | ENT |
                         bindings = <
-   &kp MINUS &kp Q      &kp W      &kp F         &kp P        &kp B         &kp J      &kp L            &kp U       &kp Y       &kp SQT    &kp PLUS
+   &kp MINUS &kp Q      &kp W      &kp F         &kp P        &kp B         &kp J      &kp L            &kp U       &kp Y       &kp SQT    &kp EQUAL
    &kp LCTRL &mt LGUI A &mt LALT R &mt LCTRL S   &mt LSHIFT T &kp G         &kp M      &mt RSHIFT N     &mt RCTRL E &mt RALT I  &mt RGUI O &kp SEMI
    &kp LPAR  &kp Z      &kp X      &kp C         &kp D        &kp V         &kp K      &kp H            &kp COMMA   &kp DOT     &kp FSLH   &kp RPAR
                                    &lt MEDIA TAB &lt NUM BSPC &lt FUN DEL   &lt BT ESC &mt RSHIFT SPACE &lt NAV RET
