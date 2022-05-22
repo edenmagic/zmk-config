@@ -18,15 +18,14 @@
 
 / {
     behaviors {
-        pht: positional_hold_tap {
+        hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "POSITIONAL_HOLD_TAP";
+            label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <170>;
             quick-tap-ms = <125>;
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <1>;    // <---[[the W key]]
         };
     };
 };
@@ -44,7 +43,7 @@
 //                                                  | TAB | BSP | DEL |   | ESC | SPC  | ENT |
                         bindings = <
    &kp MINUS &kp Q      &kp W      &kp F         &kp P        &kp B         &kp J      &kp L            &kp U       &kp Y       &kp SQT    &kp EQUAL
-   &kp LCTRL &mt LGUI A &mt LALT R &mt LCTRL S   &mt LSHIFT T &kp G         &kp M      &mt RSHIFT N     &mt RCTRL E &mt RALT I  &mt RGUI O &kp SEMI
+   &kp LCTRL &hm LGUI A &hm LALT R &hm LCTRL S   &hm LSHIFT T &kp G         &kp M      &hm RSHIFT N     &hm RCTRL E &hm RALT I  &hm RGUI O &kp SEMI
    &kp LPAR  &kp Z      &kp X      &kp C         &kp D        &kp V         &kp K      &kp H            &kp COMMA   &kp DOT     &kp FSLH   &kp RPAR
                                    &lt MEDIA TAB &lt NUM BSPC &lt FUN DEL   &lt BT ESC &mt RSHIFT SPACE &lt NAV RET
                         >;
