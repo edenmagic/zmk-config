@@ -65,15 +65,15 @@
 
                 NUM {
 // -----------------------------------------------------------------------------------------
-//                        |      |     |     |     |     |     |   |  [  |  7  |  8  |  9  |  -  |  \|  |
+//                        |      |     |     |     |     |     |   |  [  |  7  |  8  |  9  |  -  |  \   |
 //                        |      | GUI | ALT | CTL | SFT |     |   |  ]  |  4  |  5  |  6  |  *  | GRV  |
 //                        |      |     |     |     |     |     |   |  +  |  1  |  2  |  3  |  /  |      |
 //                                           |     |     |     |   |  +  |  0  |  .  |     |
                         bindings = <
-   &trans   &trans     &trans     &trans     &trans     &trans         &kp LBRC   &kp N7  &kp N8 &kp N9 &kp MINS &kp BSLH
+   &trans   &trans     &trans     &trans     &trans     &trans         &kp LBRC   &kp N7  &kp N8 &kp N9 &kp MINS &kp BACKSLASH
    &trans   &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &trans         &kp RBRC   &kp N4  &kp N5 &kp N6 &kp STAR &kp GRAVE
    &trans   &trans     &trans     &trans     &trans     &trans         &kp PLUS   &kp N1  &kp N2 &kp N3 &kp FSLH &kp EQUAL
-                          	      &trans     &trans     &trans         &kp PLUS &kp N0  &kp DOT
+                          	      &trans     &trans     &trans         &kp PLUS   &kp N0  &kp DOT
                         >;
                 };
                 
