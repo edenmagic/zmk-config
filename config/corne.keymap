@@ -26,6 +26,7 @@
             quick-tap-ms = <125>;
             flavor = "tap-preferred";
             global-quick-tap;
+            hold-trigger-key-positions;
             bindings = <&kp>, <&kp>;
         };
     };
