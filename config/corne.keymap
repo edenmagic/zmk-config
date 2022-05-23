@@ -16,6 +16,8 @@
 #define MOUSE 5
 #define FUN   6
 
+&lt { quick_tap_ms = <125>; };
+
 / {
     behaviors {
         hm: homerow_mods {
