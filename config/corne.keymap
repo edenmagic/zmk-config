@@ -79,14 +79,14 @@
                 MEDIA {
 // -----------------------------------------------------------------------------------------
 //                        |      |     |     |     |     |     |   |     |     |     |     |     |      |
-//                        |      | GUI | ALT | CTL | SFT |     |   |     | SFT | CTL | ALT | GUI |      |
-//                        |      |     |     |     |     |     |   |     |     |     |     |     |      |
-//                                           |     |     |     |   |     |     |     |     |
+//                        |      | GUI | ALT | CTL | SFT |     |   |     | BUP | VUP | PLY | NXT |      |
+//                        |      |     |     |     |     |     |   |     | BDN | VDN | PSE | PRV |      |
+//                                           |     |     |     |   |     |     | MUTE|     |
                         bindings = <
-   &trans   &trans     &trans     &trans     &trans     &trans         &trans   &trans     &trans     &trans     &trans     &trans
-   &trans   &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &trans         &trans   &kp RSHFT  &kp RCTRL  &kp RALT   &kp RGUI   &trans
-   &trans   &trans     &trans     &trans     &trans     &trans         &trans   &trans     &trans     &trans     &trans     &trans
-                          	      &trans     &trans     &trans         &trans   &trans     &trans
+   &trans   &trans     &trans     &trans     &trans     &trans         &trans   &trans       &trans       &trans      &trans     &trans
+   &trans   &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &trans         &trans   &kp C_BRI_UP &kp C_VOL_UP &kp C_PP    &kp C_NEXT &trans
+   &trans   &trans     &trans     &trans     &trans     &trans         &trans   &kp C_BRI_DN &kp C_VOL_DN &kp C_PAUSE &kp C_PREV &trans
+                          	      &trans     &trans     &trans         &trans   &kp C_MUTE   &trans
                         >;
                 };
                 
