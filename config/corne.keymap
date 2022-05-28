@@ -17,6 +17,8 @@
 #define MOUSE 5
 #define FUN   6
 
+#define AS(keycode) &as LS(keycode) keycode
+
 &lt { quick_tap_ms = <200>; };
 
 / {
@@ -27,6 +29,16 @@
             #binding-cells = <2>;
             tapping-term-ms = <190>;
             quick-tap-ms = <140>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        
+        as: auto_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AUTO_SHIFT";
+            #binding-cells = <2>;
+            tapping_term_ms = <135>;
+            quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -45,9 +57,9 @@
 //                               |  (   |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  |  )   |
 //                                                  | TAB | BSP | DEL |   | ESC | SPC  | ENT |
                         bindings = <
-   &kp MINUS &kp Q      &kp W      &kp F         &kp P        &kp B         &kp J      &kp L            &kp U       &kp Y       &kp SQT    &kp EQUAL
-   &kp CAPS &hm LGUI A &hm LALT R &hm LCTRL S   &hm LSHIFT T &kp G         &kp M      &hm RSHIFT N     &hm RCTRL E &hm RALT I  &hm RGUI O &kp SEMI
-   &kp LPAR  &kp Z      &kp X      &kp C         &kp D        &kp V         &kp K      &kp H            &kp COMMA   &kp DOT     &kp FSLH   &kp RPAR
+   AS(MINUS) &kp Q      &kp W      &kp F         &kp P        &kp B         &kp J      &kp L            &kp U       &kp Y       AS(SQT)    AS(EQUAL)
+   &kp CAPS  &hm LGUI A &hm LALT R &hm LCTRL S   &hm LSHIFT T &kp G         &kp M      &hm RSHIFT N     &hm RCTRL E &hm RALT I  &hm RGUI O AS(SEMI)
+   &kp LPAR  &kp Z      &kp X      &kp C         &kp D        &kp V         &kp K      &kp H            AS(COMMA)   AS(DOT)     AS(FSLH)   &kp RPAR
                                    &lt MEDIA TAB &lt NUM BSPC &lt FUN DEL   &lt BT ESC &hm RSHIFT SPACE &lt NAV RET
                         >;
                 };
@@ -72,9 +84,9 @@
 //                        |      |     |     |     |     |     |   |  +  |  1  |  2  |  3  |  /  |      |
 //                                           |     |     |     |   |  +  |  0  |  .  |     |
                         bindings = <
-   &trans   &trans     &trans     &trans     &trans     &trans         &kp LBRC   &kp N7  &kp N8 &kp N9 &kp MINUS &kp BACKSLASH
-   &trans   &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &trans         &kp RBRC   &kp N4  &kp N5 &kp N6 &kp STAR  &kp GRAVE
-   &trans   &trans     &trans     &trans     &trans     &trans         &kp PLUS   &kp N1  &kp N2 &kp N3 &kp FSLH  &kp EQUAL
+   &trans   &trans     &trans     &trans     &trans     &trans         &kp LBRC   AS(N7)  AS(N8) AS(N9) &kp MINUS &kp BACKSLASH
+   &trans   &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &trans         &kp RBRC   AS(N4)  AS(N5) AS(N6) &kp STAR  AS(GRAVE)
+   &trans   &trans     &trans     &trans     &trans     &trans         &kp PLUS   AS(N1)  AS(N2) AS(N3) &kp FSLH  &kp EQUAL
                           	      &trans     &trans     &trans         &kp PLUS   &kp N0  &kp DOT
                         >;
                 };
