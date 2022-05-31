@@ -40,7 +40,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "AUTO_SHIFT";
             #binding-cells = <2>;
-            tapping_term_ms = <135>;
+            tapping_term_ms = <180>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -118,7 +118,7 @@
    &trans   &trans     &kp HOME   &kp UP     &kp END    &kp INS        &trans   &trans     &trans     &trans     &trans     &trans
    &trans   &trans     &kp LEFT   &kp DOWN   &kp RIGHT  &kp CAPS       &trans   &kp RSHFT  &kp RCTRL  &kp RALT   &kp RGUI   &trans
    &trans   &trans     &kp PG_UP  &kp PG_DN  &trans     &trans         &trans   &trans     &trans     &trans     &trans     &trans
-                          	      &trans     &trans     &trans         &trans     &trans     &trans
+                          	      &trans     &trans     &trans         &trans   &trans     &trans
                         >;
                 };
                 
