@@ -96,7 +96,7 @@
         num_sym {
             bindings = <
     AS(N1)     AS(N2)     AS(N3)     AS(N4)      AS(N5) AS(N6) AS(N7)      AS(N8)      AS(N9)    AS(N0)
-    &trans     &trans     &trans     &trans      &trans &trans &trans      &trans      AS(MINUS) AS(EQUALS)
+    &trans     &trans     &trans     &trans      &trans &trans &trans      &trans      AS(MINUS) AS(EQUAL)
     &kp DEL               &none      &none       &none  &none  &none       &none       AS(GRAVE) AS(BACKSLASH)
     AS(LBKT)   &none      &trans     &trans              &trans            &kp RET     &trans    AS(RBKT)
             >;
