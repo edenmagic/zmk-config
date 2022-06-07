@@ -39,7 +39,9 @@
         };        
     };
 };
-
+/ {
+    combos {
+        compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <50>;
             key-positions = <0 1>;
@@ -74,7 +76,10 @@
             timeout-ms = <50>;
             key-positions = <32 33>;
             bindings = <&kp FSLH>;
-        };        
+        };  
+        
+   };
+};
 
 / {
     keymap {
