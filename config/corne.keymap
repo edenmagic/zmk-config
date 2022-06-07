@@ -73,13 +73,13 @@
             bindings = <&kp EQUAL>;
         };
         
-        combo_caps {
+        combo_semi {
             timeout-ms = <50>;
             key-positions = <21 22>;
             bindings = <&kp SEMI>;
         }; 
         
-        combo_lpar {
+        combo_rpar {
             timeout-ms = <50>;
             key-positions = <33 34>;
             bindings = <&kp RPAR>;
