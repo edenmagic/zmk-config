@@ -20,7 +20,7 @@
 
 #define AS(keycode) &as LS(keycode) keycode
 
-&lt { quick_tap_ms = <200>; };
+&lt { quick_tap_ms = <140>; };
 
 / {
     behaviors {
@@ -46,6 +46,49 @@
     };
 };
 
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_min {
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            bindings = <&kp MINUS>;
+        };
+        
+        combo_caps {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            bindings = <&kp CAPS>;
+        }; 
+        
+        combo_lpar {
+            timeout-ms = <50>;
+            key-positions = <25 26>;
+            bindings = <&kp LPAR>;
+        };
+        
+        combo_eql {
+            timeout-ms = <50>;
+            key-positions = <9 10>;
+            bindings = <&kp EQUAL>;
+        };
+        
+        combo_caps {
+            timeout-ms = <50>;
+            key-positions = <21 22>;
+            bindings = <&kp SEMI>;
+        }; 
+        
+        combo_lpar {
+            timeout-ms = <50>;
+            key-positions = <33 34>;
+            bindings = <&kp RPAR>;
+        };
+        
+        
+    };
+};
+
 
 / {
         keymap {
@@ -67,14 +110,14 @@
                 BT {
 // -----------------------------------------------------------------------------------------
 //                         |      |     |     |     |     |     |   |     |     |     |     |     | BTCR |
-//                         |      |     |     |     |     |     |   |USBPR| BT4 | BT5 |     |     | EPON |
-//                         |      |     |     |     |     |     |   |BT PR| BT1 | BT2 | BT3 |     | EPOFF|
+//                         | EPON |     |     |     |     |     |   |USBPR| BT4 | BT5 |     |     | EPON |
+//                         | EPOFF|     |     |     |     |     |   |BT PR| BT1 | BT2 | BT3 |     | EPOFF|
 //                                            |     |     |     |   |     |     |     |     |
                         bindings = <
    &trans            &trans     &trans     &trans     &trans     &trans         &trans        &trans        &trans       &trans       &trans &bt BT_CLR
    &ext_power EP_ON  &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &trans         &out OUT_USB  &bt BT_SEL 3  &bt BT_SEL 4 &trans       &trans &ext_power EP_ON
    &ext_power EP_OFF &trans     &trans     &trans     &trans     &trans         &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &trans &ext_power EP_OFF
-                          	      &trans     &trans     &trans         &trans        &trans        &trans
+                                      	   &trans     &trans     &trans         &trans        &trans        &trans
                         >;
                 };
 
