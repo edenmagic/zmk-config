@@ -11,6 +11,7 @@
 #define DEFAULT 0
 #define NUM_SYM 1
 #define NAV     2
+#define FUN     3
 
 #define AS(keycode) &as LS(keycode) keycode
 
@@ -90,25 +91,34 @@
     &kp Q      &kp W        &kp E       &kp R       &kp T  &kp Y  &kp U       &kp I       &kp O       &kp P
     &hm LGUI A &hm LALT S   &hm LCTRL D &hm LSHFT F &kp G  &kp H  &hm RSHFT J &hm RCTRL K &hm RALT L  &hm RGUI RET
     &kp Z                   &kp X       &kp C       &kp V  &kp B  &kp N       &kp M       &kp COMMA   &kp DOT
-    &kp LPAR   &lt NAV BSPC &kp LALT    &lt NAV BSPC       &lt NUM_SYM SPACE  &kp SEMI    &lt NAV DEL &kp RPAR
+    &kp LPAR   &lt FUN BSPC &kp LALT    &lt NAV BSPC       &lt NUM_SYM SPACE  &kp SEMI    &lt NAV DEL &kp RPAR
             >;
         };
         num_sym {
             bindings = <
     AS(N1)     AS(N2)     AS(N3)     AS(N4)      AS(N5) AS(N6) AS(N7)      AS(N8)      AS(N9)    AS(N0)
-    &trans     &trans     &trans     &trans      &trans &trans &trans      &trans      AS(MINUS) AS(EQUAL)
-    &kp DEL               &none      &none       &none  &none  &none       &none       AS(GRAVE) AS(BACKSLASH)
+    &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT   &trans &trans &kp RSHFT   &kp RCTRL   &kp RALT  &kp RGUI
+    AS(MINUS)             AS(EQUAL)  &none       &none  &none  &none       &none       AS(GRAVE) AS(BACKSLASH)
     AS(LBKT)   &none      &trans     &trans              &trans            &kp RET     AS(SEMI)  AS(RBKT)
             >;
         };
 
     nav {
             bindings = <
-    &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &kp INS &kp HOME  &kp UP       &kp END     &bt BT_CLR
-    &trans        &trans       &trans       &trans       &none         &none &kp LEFT    &kp DOWN     &kp RIGHT   &none
-    &bootloader   &reset       &none        &none        &none         &none &kp PG_DN   &kp PG_UP    &trans      &none
+    &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &kp INS &kp HOME  &kp UP       &kp END     &trans 
+    &bt BT_CLR    &trans       &trans       &trans       &none         &none   &kp LEFT  &kp DOWN     &kp RIGHT   &none
+    &bootloader                &reset       &none        &none         &none   &none     &kp PG_DN    &kp PG_UP   &trans      
     &none         &none        &none        &trans       &trans                          &kp RET      &trans      &trans
             >;
         };
+        
+        fun {
+            bindings = <
+    &kp F1     &kp F2     &kp F3     &kp F4      &kp F5 &kp F6 &kp F7      &kp F8      &kp F9    &kp F10
+    &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT   &trans &trans &kp RSHFT   &kp RCTRL   &kp RALT  &kp RGUI
+    &kp F11               &none      &none       &none  &none  &none       &none       &none     &kp F12
+    &trans     &none      &trans     &trans              &trans            &trans      &trans    &trans
+            >;
+        };        
     };
 };
