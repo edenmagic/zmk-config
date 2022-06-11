@@ -9,9 +9,10 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
-#define NUM_SYM 1
+#define NUM     1
 #define NAV     2
 #define FUN     3
+#define BT      4
 
 #define AS(keycode) &as LS(keycode) keycode
 
@@ -67,10 +68,10 @@
             bindings = <&kp BSPC>;
         };
         
-        combo_quote {
+        combo_semi {
             timeout-ms = <25>;
             key-positions = <18 19>;
-            bindings = <&kp SQT>;
+            bindings = <&kp SEMI>;
         }; 
         
         combo_slash {
@@ -85,39 +86,47 @@
 / {
     keymap {
         compatible = "zmk,keymap";
-
         default_layer {
             bindings = <
     &kp Q      &kp W        &kp F       &kp P       &kp B  &kp J  &kp L       &kp U       &kp Y       &kp SQT
     &hm LGUI A &hm LALT R   &hm LCTRL S &hm LSHFT T &kp G  &kp M  &hm RSHFT N &hm RCTRL E &hm RALT I  &hm RGUI O
     &kp Z                   &kp X       &kp C       &kp D  &kp V  &kp K       &kp H       &kp COMMA   &kp DOT
-    &kp LPAR   &lt FUN DEL  &kp TAB     &lt NAV BSPC       &lt NUM_SYM SPACE  &kp RET     &lt NAV ESC &kp RPAR
+    &kp LPAR   &lt BT DEL   &lt FUN TAB &lt NUM BSPC       &lt NAV SPACE      &lt NAV RET &lt NAV ESC &kp RPAR
             >;
         };
-        num_sym {
+        num {
             bindings = <
-    AS(N1)     AS(N2)     AS(N3)     AS(N4)      AS(N5) AS(N6) AS(N7)      AS(N8)      AS(N9)    AS(N0)
-    &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT   &trans &trans &kp RSHFT   &kp RCTRL   &kp RALT  &kp RGUI
-    AS(MINUS)             AS(EQUAL)  &none       &none  &none  &none       &none       AS(GRAVE) AS(BACKSLASH)
-    AS(LBKT)   &none      &trans     &trans              &trans            &kp RET     AS(SEMI)  AS(RBKT)
+    AS(N1)     AS(N2)     AS(N3)     AS(N4)      AS(N5)    AS(N6)      AS(N7)      AS(N8)      AS(N9)    &kp MINUS
+    &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT   &kp GRAVE &kp BSLH    AS(N4)      AS(N5)      AS(N6)    &kp KP_MULTIPLY
+    &trans                &trans     &trans      &trans    &kp KP_PLUS AS(N1)      AS(N2)      AS(N3)    &kp KP_DIVIDE
+    AS(LBKT)   &trans     &trans     &trans              AS(N0)                    &kp DOT     &kp KP_ENTER AS(RBKT)
             >;
         };
 
-    nav {
+        nav {
             bindings = <
-    &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &kp INS &kp HOME  &kp UP       &kp END     &trans 
-    &bt BT_CLR    &trans       &trans       &trans       &none         &none   &kp LEFT  &kp DOWN     &kp RIGHT   &none
-    &bootloader                &reset       &none        &none         &none   &none     &kp PG_DN    &kp PG_UP   &trans      
-    &none         &none        &none        &trans       &trans                          &kp RET      &trans      &trans
+    &trans  &kp HOME   &kp UP     &kp END     &kp INS  &trans   &trans    &trans      &trans      &trans
+    &trans  &kp LEFT   &kp DOWN   &kp RIGHT   &kp CAPS &trans   &kp RSHFT &kp RCTRL   &kp RALT    &kp RGUI
+    &trans             &kp PG_UP  &kp PG_DN   &trans   &trans   &trans    &trans      &trans      &trans      
+    &trans  &trans     &trans     &trans               &trans             &trans      &trans      &trans
             >;
         };
         
         fun {
             bindings = <
-    &kp F1     &kp F2     &kp F3     &kp F4      &kp F5 &kp F6 &kp F7      &kp F8      &kp F9    &kp F10
-    &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT   &trans &trans &kp RSHFT   &kp RCTRL   &kp RALT  &kp RGUI
-    &kp F11               &none      &none       &none  &none  &none       &none       &none     &kp F12
-    &trans     &none      &trans     &trans              &trans            &trans      &trans    &trans
+    &trans     &trans     &trans     &trans      &trans &trans &kp F1      &kp F2      &kp F3    &kp F4 
+    &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT   &trans &trans &kp F5      &kp F6      &kp F7    &kp F8 
+    &trans                &trans     &trans      &trans &trans &kp F9      &kp F10     &kp F11   &kp F12
+    &trans     &trans     &trans     &trans             &trans             &trans      &trans    &trans
+            >;
+        };   
+        
+        bt {
+            bindings = <
+    &trans     &trans     &trans     &trans      &trans &trans   &trans       &trans       &trans       &bt BT_CLR
+    &trans     &trans     &trans     &trans      &trans &trans   &bt BT_SEL 3 &bt BT_SEL 4 &trans       &none
+    &bootloader           &reset     &trans      &trans &trans   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans      
+    &trans     &trans     &trans     &trans             &trans                &trans       &trans       &trans
             >;
         };        
     };
