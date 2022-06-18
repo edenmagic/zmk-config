@@ -151,12 +151,12 @@
 / {
     keymap {
         compatible = "zmk,keymap";
-        default_layer {
+           default_layer {
             bindings = <
-    &kp Q      &kp W        &kp F       &kp P       &kp B  &kp J  &kp L       &kp U       &kp Y       &kp SQT
-    &hm LGUI A &hm LALT R   &hm LCTRL S &hm LSHFT T &kp G  &kp M  &hm RSHFT N &hm RCTRL E &hm RALT I  &hm RGUI O
-    &kp Z                   &kp X       &kp C       &kp D  &kp V  &kp K       &kp H       &kp COMMA   &kp DOT
-    &kp LPAR   &lt BT DEL   &lt FUN TAB &lt NUM BSPC       &lt MOUSE SPACE    &lt NAV RET &lt NAV ESC &kp RPAR
+    &kp Q      &kp W        &kp E       &kp R       &kp T  &kp Y  &kp U       &kp I       &kp O       &kp P
+    &hm LGUI A &hm LALT S   &hm LCTRL D &hm LSHFT F &kp G  &kp H  &hm RSHFT J &hm RCTRL K &hm RALT L  &hm RGUI RET
+    &kp Z                   &kp X       &kp C       &kp V  &kp B  &kp N       &kp M       &kp COMMA   &kp DOT
+    &kp LPAR   &lt FUN BSPC &kp LALT    &lt NAV BSPC       &lt NUM SPACE      &kp SEMI    &lt NAV DEL &kp RPAR
             >;
         };
         num {
@@ -219,6 +219,15 @@
     &hm LGUI A &hm LALT S   &hm LCTRL D &hm LSHFT F &kp G  &kp H  &hm RSHFT J &hm RCTRL K &hm RALT L  &hm RGUI RET
     &kp Z                   &kp X       &kp C       &kp V  &kp B  &kp N       &kp M       &kp COMMA   &kp DOT
     &kp LPAR   &lt FUN BSPC &kp LALT    &lt NAV BSPC       &lt NUM SPACE      &kp SEMI    &lt NAV DEL &kp RPAR
+            >;
+        };
+        
+        default_layer {
+            bindings = <
+    &kp Q      &kp W        &kp F       &kp P       &kp B  &kp J  &kp L       &kp U       &kp Y       &kp SQT
+    &hm LGUI A &hm LALT R   &hm LCTRL S &hm LSHFT T &kp G  &kp M  &hm RSHFT N &hm RCTRL E &hm RALT I  &hm RGUI O
+    &kp Z                   &kp X       &kp C       &kp D  &kp V  &kp K       &kp H       &kp COMMA   &kp DOT
+    &kp LPAR   &lt BT DEL   &lt FUN TAB &lt NUM BSPC       &lt MOUSE SPACE    &lt NAV RET &lt NAV ESC &kp RPAR
             >;
         };
 */
