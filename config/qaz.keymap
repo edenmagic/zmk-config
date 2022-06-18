@@ -91,6 +91,12 @@
             bindings = <&kp TAB>;
         }; 
         
+        combo_quote {
+            timeout-ms = <25>;
+            key-positions = <10 19>;
+            bindings = <&kp SQT>;
+        };         
+        
         combo_caps {
             timeout-ms = <25>;
             key-positions = <20 21>;
@@ -99,7 +105,7 @@
         
         combo_num {
             timeout-ms = <25>;
-            key-positions = <22 23>;
+            key-positions = <21 22 23>;
             bindings = <&kp KP_NUM>;
         };
         
@@ -111,7 +117,7 @@
         
         combo_scroll {
             timeout-ms = <25>;
-            key-positions = <25 26>;
+            key-positions = <25 26 27>;
             bindings = <&kp SLCK>;
         };
         
@@ -156,7 +162,7 @@
     &kp Q      &kp W        &kp E       &kp R       &kp T  &kp Y  &kp U       &kp I       &kp O       &kp P
     &hm LGUI A &hm LALT S   &hm LCTRL D &hm LSHFT F &kp G  &kp H  &hm RSHFT J &hm RCTRL K &hm RALT L  &hm RGUI RET
     &kp Z                   &kp X       &kp C       &kp V  &kp B  &kp N       &kp M       &kp COMMA   &kp DOT
-    &kp LPAR   &lt FUN BSPC &kp LALT    &lt NAV BSPC       &lt NUM SPACE      &kp SEMI    &lt NAV DEL &kp RPAR
+   &lt BT LPAR &lt FUN DEL  &kp LALT    &lt NAV BSPC       &lt NUM SPACE      &kp SEMI    &lt NAV TAB &lt BT RPAR
             >;
         };
         num {
@@ -164,7 +170,7 @@
     AS(N1)     AS(N2)     AS(N3)     AS(N4)      AS(N5)    AS(N6)      AS(N7)      AS(N8)      AS(N9)    &kp MINUS
     &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT   &kp GRAVE &kp BSLH    AS(N4)      AS(N5)      AS(N6)    &kp KP_MULTIPLY
     &trans                &trans     &trans      &trans    &kp KP_PLUS AS(N1)      AS(N2)      AS(N3)    &kp KP_DIVIDE
-    AS(LBKT)   &trans     &trans     &trans              AS(N0)                    &kp DOT     &kp KP_ENTER AS(RBKT)
+    AS(LBKT)   &trans     &trans     &trans              AS(N0)                    &kp DOT     AS(N0)    AS(RBKT)
             >;
         };
 
