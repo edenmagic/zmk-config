@@ -99,7 +99,7 @@
         
         combo_mute {
             timeout-ms = <25>;
-            key-positions = <11 24>;
+            key-positions = <11 35>;
             bindings = <&kp C_MUTE>;
         };        
         
