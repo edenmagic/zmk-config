@@ -28,7 +28,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <190>;
+            tapping-term-ms = <180>;
             quick-tap-ms = <140>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -51,7 +51,7 @@
         compatible = "zmk,combos";
         combo_min {
             timeout-ms = <25>;
-            key-positions = <1 2>;
+            key-positions = <3 4>;
             bindings = <&kp MINUS>;
         };
         
@@ -69,12 +69,12 @@
         
         combo_eql {
             timeout-ms = <25>;
-            key-positions = <9 10>;
+            key-positions = <7 8>;
             bindings = <&kp EQUAL>;
         };
         
         combo_semi {
-            timeout-ms = <25>;
+            timeout-ms = <20>;
             key-positions = <21 22>;
             bindings = <&kp SEMI>;
         }; 
@@ -85,6 +85,23 @@
             bindings = <&kp RPAR>;
         };
         
+        combo_print {
+            timeout-ms = <25>;
+            key-positions = <0 11>;
+            bindings = <&kp PSCRN>;
+        };        
+ 
+         combo_play {
+            timeout-ms = <25>;
+            key-positions = <0 24>;
+            bindings = <&kp C_PP>;
+        };
+        
+        combo_mute {
+            timeout-ms = <25>;
+            key-positions = <11 24>;
+            bindings = <&kp C_MUTE>;
+        };        
         
     };
 };
