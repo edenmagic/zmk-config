@@ -54,7 +54,7 @@
             key-positions = <3 4>;
             bindings = <&kp MINUS>;
         };
-        
+/*        
         combo_caps {
             timeout-ms = <25>;
             key-positions = <13 14>;
@@ -66,13 +66,13 @@
             key-positions = <25 26>;
             bindings = <&kp LPAR>;
         };
-        
+ */      
         combo_eql {
             timeout-ms = <25>;
             key-positions = <7 8>;
             bindings = <&kp EQUAL>;
         };
-        
+/*        
         combo_semi {
             timeout-ms = <20>;
             key-positions = <21 22>;
@@ -84,7 +84,7 @@
             key-positions = <33 34>;
             bindings = <&kp RPAR>;
         };
-        
+*/        
         combo_print {
             timeout-ms = <25>;
             key-positions = <0 11>;
