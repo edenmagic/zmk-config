@@ -54,37 +54,43 @@
             key-positions = <3 4>;
             bindings = <&kp MINUS>;
         };
-/*        
+        
+        combo_esc {
+            timeout-ms = <25>;
+            key-positions = <4 5>;
+            bindings = <&kp ESC>;
+        };
+        
         combo_caps {
             timeout-ms = <25>;
-            key-positions = <13 14>;
+            key-positions = <16 17>;
             bindings = <&caps_word>;
         }; 
         
         combo_lpar {
             timeout-ms = <25>;
-            key-positions = <25 26>;
+            key-positions = <28 29>;
             bindings = <&kp LPAR>;
         };
- */      
+       
         combo_eql {
             timeout-ms = <25>;
             key-positions = <7 8>;
             bindings = <&kp EQUAL>;
         };
-/*        
+        
         combo_semi {
             timeout-ms = <20>;
-            key-positions = <21 22>;
+            key-positions = <18 19>;
             bindings = <&kp SEMI>;
         }; 
         
         combo_rpar {
             timeout-ms = <25>;
-            key-positions = <33 34>;
+            key-positions = <30 31>;
             bindings = <&kp RPAR>;
         };
-*/        
+        
         combo_print {
             timeout-ms = <25>;
             key-positions = <0 11>;
