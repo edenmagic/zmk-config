@@ -120,6 +120,11 @@
   };
 };
 
+&sk {
+    release-after-ms = <1000>;
+    quick-release;
+    /delete-property/ ignore-modifiers;
+};
 
 / {
         keymap {
@@ -133,7 +138,7 @@
 //                                                  | TAB | BSP | DEL |   | ESC | SPC  | ENT |
                         bindings = <
    &kp ESC    &kp Q      &kp W      &kp F         &kp P        &kp B         &kp J      &kp L            &kp U       &kp Y       AS(SQT)    AS(EQUAL)
-   &caps_word &hm LGUI A &hm LALT R &hm LCTRL S   &hm LSHIFT T &kp G         &kp M      &hm RSHIFT N     &hm RCTRL E &hm RALT I  &hm RGUI O AS(SEMI)
+   &sk LSHIFT &hm LGUI A &hm LALT R &hm LCTRL S   &hm LSHIFT T &kp G         &kp M      &hm RSHIFT N     &hm RCTRL E &hm RALT I  &hm RGUI O AS(SEMI)
    &kp LPAR   &kp Z      &kp X      &kp C         &kp D        &kp V         &kp K      &kp H            AS(COMMA)   AS(DOT)     AS(FSLH)   &kp RPAR
                                     &lt MEDIA TAB &lt NUM BSPC &lt FUN DEL   &lt BT ESC &lt MOUSE SPACE  &lt NAV RET
                         >;
