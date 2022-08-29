@@ -184,15 +184,6 @@
             >;
         };   
         
-        mouse {
-            bindings = <
-    &kp KP_NUM &trans           &mkp RCLK      &mmv MOVE_UP     &mkp LCLK         &trans   &trans    &trans      &trans      &trans
-    &trans     &trans           &mmv MOVE_LEFT &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &trans   &kp RSHFT &kp RCTRL   &kp RALT    &kp RGUI
-    &trans     &mwh SCROLL_LEFT &mwh SCROLL_UP &mwh SCROLL_DOWN &mwh SCROLL_RIGHT &trans   &trans    &trans      &trans      
-    &trans     &mkp RCLK        &mkp LCLK      &mkp MCLK        &trans            &trans   &trans    &trans
-            >;         
-        };   
-        
         bt {
             bindings = <
     &trans     &trans     &trans     &trans      &trans &trans       &trans       &trans       &trans       &bt BT_CLR
@@ -201,6 +192,16 @@
     &trans     &trans     &trans     &trans             &trans                &trans       &trans       &trans
             >;
         }; 
+        
+        mouse {
+            bindings = <
+    &kp KP_NUM &trans           &mkp RCLK      &mmv MOVE_UP     &mkp LCLK         &trans   &trans    &trans      &trans      &trans
+    &trans     &trans           &mmv MOVE_LEFT &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &trans   &kp RSHFT &kp RCTRL   &kp RALT    &kp RGUI
+    &trans     &mwh SCROLL_LEFT &mwh SCROLL_UP &mwh SCROLL_DOWN &mwh SCROLL_RIGHT &trans   &trans    &trans      &trans      
+    &trans     &mkp RCLK        &mkp LCLK      &mkp MCLK        &trans            &trans   &trans    &trans
+            >;         
+        };              
+    };
     };
 };
 
