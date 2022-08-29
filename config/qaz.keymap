@@ -194,18 +194,11 @@
         }; 
         
         mouse {
-            bindings = <
-    &trans     &trans     &trans     &trans      &trans &trans       &trans       &trans       &trans       &bt BT_CLR
-    &trans     &trans     &trans     &trans      &trans &out OUT_USB &bt BT_SEL 3 &bt BT_SEL 4 &trans       &trans
-    &bootloader           &reset     &trans      &trans &out OUT_BLE &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans      
-    &trans     &trans     &trans     &trans             &trans                &trans       &trans       &trans         
-            
-            
-            
-    /*&kp KP_NUM &trans           &mkp RCLK      &mmv MOVE_UP     &mkp LCLK         &trans   &trans    &trans      &trans      &trans
+            bindings = <                     
+    &kp KP_NUM &trans           &mkp RCLK      &mmv MOVE_UP     &mkp LCLK         &trans   &trans    &trans      &trans      &trans
     &trans     &trans           &mmv MOVE_LEFT &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &trans   &kp RSHFT &kp RCTRL   &kp RALT    &kp RGUI
-    &trans     &mwh SCROLL_LEFT &mwh SCROLL_UP &mwh SCROLL_DOWN &mwh SCROLL_RIGHT &trans   &trans    &trans      &trans      
-    &trans     &mkp RCLK        &mkp LCLK      &mkp MCLK        &trans            &trans   &trans    &trans*/
+    &trans     &mwh SCROLL_LEFT &mwh SCROLL_UP &mwh SCROLL_DOWN &mwh SCROLL_RIGHT &trans   &trans    &trans      &trans
+    &trans     &mkp RCLK        &mkp LCLK      &mkp MCLK        &trans            &trans   &trans    &trans
             >;         
         };              
     };
