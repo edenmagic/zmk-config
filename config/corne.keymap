@@ -59,7 +59,7 @@
         
         combo_esc {
             timeout-ms = <25>;
-            key-positions = <4 5>;
+            key-positions = <28 29>;
             bindings = <&gresc>;
         };
         
@@ -71,7 +71,7 @@
         
         combo_lpar {
             timeout-ms = <25>;
-            key-positions = <28 29>;
+            key-positions = <4 5>;
             bindings = <&kp LPAR>;
         };
        
@@ -89,7 +89,7 @@
         
         combo_rpar {
             timeout-ms = <25>;
-            key-positions = <30 31>;
+            key-positions = <6 7>;
             bindings = <&kp RPAR>;
         };
         
