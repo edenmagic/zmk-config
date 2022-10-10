@@ -55,7 +55,7 @@
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <25>;
-            key-positions = <0 1>;
+            key-positions = <3 4>;
             bindings = <&kp ESC>;
         };
         
@@ -74,10 +74,10 @@
         
         combo_bspace {
             timeout-ms = <25>;
-            key-positions = <8 9>;
+            key-positions = <5 6>;
             bindings = <&kp BSPC>;
         };        
-        
+ /*       
         combo_tab {
             timeout-ms = <25>;
             key-positions = <10 11>;
@@ -89,10 +89,10 @@
             key-positions = <10 19>;
             bindings = <&kp SQT>;
         };         
-        
+ */      
         combo_caps {
             timeout-ms = <25>;
-            key-positions = <20 21>;
+            key-positions = <13 14>;
             bindings = <&caps_word>;
         };
         
@@ -116,7 +116,7 @@
         
         combo_semi {
             timeout-ms = <25>;
-            key-positions = <18 19>;
+            key-positions = <15 16>;
             bindings = <&kp SEMI>;
         }; 
         
@@ -152,10 +152,10 @@
         compatible = "zmk,keymap";
            default_layer {
             bindings = <
-    &kp Q      &kp W        &kp E       &kp R       &kp T  &kp Y  &kp U       &kp I       &kp O       &kp P
-    &hm LGUI A &hm LALT S   &hm LCTRL D &hm LSHFT F &kp G  &kp H  &hm RSHFT J &hm RCTRL K &hm RALT L  &hm RGUI RET
-    &kp Z                   &kp X       &kp C       &kp V  &kp B  &kp N       &kp M       &kp COMMA   &kp DOT
-   &lt BT LPAR &lt FUN DEL  &kp LALT    &lt NAV BSPC       &lt NUM SPACE      &kp SEMI    &lt NAV TAB &lt BT RPAR
+    &kp Q      &kp W        &kp F       &kp P       &kp B  &kp J  &kp L       &kp U       &kp Y       &kp SQT
+    &hm LGUI A &hm LALT R   &hm LCTRL S &hm LSHFT T &kp G  &kp M  &hm RSHFT N &hm RCTRL E &hm RALT I  &hm RGUI O
+    &kp Z                   &kp X       &kp C       &kp D  &kp V  &kp K       &kp H       &kp COMMA   &kp DOT
+    &kp LPAR   &lt BT DEL   &lt FUN TAB &lt NUM BSPC       &lt MOUSE SPACE    &lt NAV RET &lt NAV ESC &kp RPAR
             >;
         };
         num {
@@ -216,7 +216,7 @@
     &kp Q      &kp W        &kp E       &kp R       &kp T  &kp Y  &kp U       &kp I       &kp O       &kp P
     &hm LGUI A &hm LALT S   &hm LCTRL D &hm LSHFT F &kp G  &kp H  &hm RSHFT J &hm RCTRL K &hm RALT L  &hm RGUI RET
     &kp Z                   &kp X       &kp C       &kp V  &kp B  &kp N       &kp M       &kp COMMA   &kp DOT
-    &kp LPAR   &lt FUN BSPC &kp LALT    &lt NAV BSPC       &lt NUM SPACE      &kp SEMI    &lt NAV DEL &kp RPAR
+    &lt BT LPAR &lt FUN DEL &kp LALT    &lt NAV BSPC       &lt NUM SPACE      &kp SEMI    &lt NAV TAB &lt BT RPAR
             >;
         };
         
