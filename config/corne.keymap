@@ -122,20 +122,24 @@
     /delete-property/ ignore-modifiers;
 };
 
+&soft_off {
+    hold-time-ms = <2000>; // Only turn off it the key is held for 5 seconds or longer.
+};
+
 / {
         keymap {
                 compatible = "zmk,keymap";
 
                 DEFAULT {
 // -----------------------------------------------------------------------------------------
-//                               |  MIN |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  '  | EQL  |
+//                               |  MIN |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  '  | power|
 //                               | CAPSW|  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |  ;   |
 //                               |  (   |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  |  )   |
 //                                                  | TAB | BSP | DEL |   | ESC | SPC  | ENT |
                         bindings = <
-   &kp ESC    &kp Q      &kp W      &kp F         &kp P        &kp B         &kp J      &kp L            &kp U       &kp Y       AS(SQT)    AS(EQUAL)
-   &sk LSHIFT &hm LGUI A &hm LALT R &hm LCTRL S   &hm LSHIFT T &kp G         &kp M      &hm RSHIFT N     &hm RCTRL E &hm RALT I  &hm RGUI O AS(SEMI)
-   &kp LPAR   &kp Z      &kp X      &kp C         &kp D        &kp V         &kp K      &kp H            AS(COMMA)   AS(DOT)     AS(FSLH)   &kp RPAR
+   &soft_off    &kp Q      &kp W      &kp F         &kp P        &kp B         &kp J      &kp L            &kp U       &kp Y       AS(SQT)    &soft_off
+   &kp C_VOL_UP &hm LGUI A &hm LALT R &hm LCTRL S   &hm LSHIFT T &kp G         &kp M      &hm RSHIFT N     &hm RCTRL E &hm RALT I  &hm RGUI O AS(SEMI)
+   &kp C_VOL_DN &kp Z      &kp X      &kp C         &kp D        &kp V         &kp K      &kp H            AS(COMMA)   AS(DOT)     AS(FSLH)   &kp RPAR
                                     &lt MEDIA TAB &lt NUM BSPC &lt FUN DEL &lt BT ESC &lt MOUSE SPACE  &lt NAV RET 
                         >;
                 };
@@ -170,8 +174,8 @@
                 MEDIA {
 // -----------------------------------------------------------------------------------------
 //                        |      |     |     |     |     |     |   |     |     |     |     |     |      |
-//                        |      | GUI | ALT | CTL | SFT |     |   |     | VUP | BUP | PLY | NXT | RGB  |
-//                        |      |     |     |     |     |     |   |     | VDN | BDN | PSE | PRV | BKL  |
+//                        |      | GUI | ALT | CTL | SFT |     |   |     | VUP | BUP | PLY | NXT |      |
+//                        |      |     |     |     |     |     |   |     | VDN | BDN | PSE | PRV |      |
 //                                           |     |     |     |   |     |     | MUTE|     |
                         bindings = <
    &trans   &trans     &trans     &trans     &trans     &trans         &trans   &trans       &trans       &trans      &trans     &trans
@@ -190,7 +194,7 @@
                         bindings = <
    &trans   &trans     &kp HOME   &kp UP     &kp END    &kp INS        &trans   &trans     &trans     &trans     &trans     &trans
    &trans   &trans     &kp LEFT   &kp DOWN   &kp RIGHT  &kp CAPS       &trans   &kp RSHFT  &kp RCTRL  &kp RALT   &kp RGUI   &trans
-   &trans   &trans     &kp PG_UP  &kp PG_DN  &trans     &kp PSCRN      &trans   &trans     &trans     &trans     &trans     &trans
+   &trans   &trans     &kp PG_UP  &kp PG_DN  &kp SLCK   &kp KP_NUM     &trans   &trans     &trans     &trans     &trans     &trans
                           	      &trans     &trans     &trans         &trans   &trans     &trans
                         >;
                 };
@@ -202,7 +206,7 @@
 //                        |      |     |     |     |     |     |   |     |     |     |     |     |      |
 //                                           | M2  | M1  | M3  |   |     |     |     |     |
                         bindings = <
-   &kp KP_NUM &trans           &mkp RCLK      &mmv MOVE_UP     &mkp LCLK         &trans        &trans   &trans     &trans     &trans     &trans     &trans
+   &trans     &trans           &mkp RCLK      &mmv MOVE_UP     &mkp LCLK         &trans        &trans   &trans     &trans     &trans     &trans     &trans
    &trans     &trans           &mmv MOVE_LEFT &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &trans        &trans   &kp RSHFT  &kp RCTRL  &kp RALT   &kp RGUI   &trans
    &trans     &mwh SCROLL_LEFT &mwh SCROLL_UP &mwh SCROLL_DOWN &mwh SCROLL_RIGHT &trans        &trans   &trans     &trans     &trans     &trans     &trans
                           	                  &mkp RCLK        &mkp LCLK         &mkp MCLK     &trans   &trans     &trans
