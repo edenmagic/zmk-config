@@ -26,6 +26,24 @@
 &lt { quick_tap_ms = <140>; };
 
 / {
+    macros {
+        macro_email: macro_email {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_tap &kp C &kp H &kp E &kp U &kp N &kp G &kp DOT &kp E &kp D &kp E &kp N &kp DOT &kp L &kp A &kp W>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp N2>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>
+                ;
+        };
+    };
+};
+
+/ {
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -54,7 +72,7 @@
         compatible = "zmk,combos";
         combo_min {
             timeout-ms = <25>;
-            key-positions = <5 17>;
+            key-positions = <4 16>;
             bindings = <&kp MINUS>;
         };
         
@@ -78,7 +96,7 @@
        
         combo_eql {
             timeout-ms = <25>;
-            key-positions = <6 18>;
+            key-positions = <7 19>;
             bindings = <&kp EQUAL>;
         };
         
@@ -110,7 +128,13 @@
             timeout-ms = <25>;
             key-positions = <11 35>;
             bindings = <&kp C_MUTE>;
-        };        
+        };
+
+        combo_email {
+            timeout-ms = <25>;
+            key-positions = <30 31>;
+            bindings = <&macro_email>;
+        };
         
     };
 };
