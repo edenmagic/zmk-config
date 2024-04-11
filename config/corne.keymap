@@ -28,8 +28,8 @@
 / {
     macros {
          ZMK_MACRO(macro_email,
-            wait-ms = <40>;
-            tap-ms = <40>;
+            wait-ms = <30>;
+            tap-ms = <30>;
             bindings
                 = <&macro_tap &kp C &kp H &kp E &kp U &kp N &kp G &kp DOT &kp E &kp D &kp E &kp N &kp DOT &kp L &kp A &kp W>
                 , <&macro_press &kp LSHFT>
@@ -37,10 +37,10 @@
                 , <&macro_release &kp LSHFT>
                 , <&macro_tap &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>
                 ;
-        )
+        );
         ZMK_MACRO(macro_imwrite,
-            wait-ms = <40>;
-            tap-ms = <40>;
+            wait-ms = <30>;
+            tap-ms = <30>;
             bindings
                 = <&macro_press &kp LSHFT>
                 , <&macro_tap &kp I>
