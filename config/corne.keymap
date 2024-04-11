@@ -37,7 +37,9 @@
                 , <&macro_release &kp LSHFT>
                 , <&macro_tap &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>
                 ;
-        );
+        )
+
+/*
         ZMK_MACRO(macro_imwrite,
             wait-ms = <30>;
             tap-ms = <30>;
@@ -50,6 +52,7 @@
                 , <&macro_tap &kp C &kp O &kp U &kp N &kp S &kp E &kp L &kp SPACE>
                 ;
         )
+*/
     };
 };
 
@@ -145,12 +148,13 @@
             key-positions = <30 31>;
             bindings = <&macro_email>;
         };
-
+/*
         combo_imwrite {
             timeout-ms = <25>;
             key-positions = <27 28>;
             bindings = <&macro_imwrite>;
         };
+*/
     };
 };
 
