@@ -28,8 +28,7 @@
 / {
     macros {
          ZMK_MACRO(macro_email,
-            wait-ms = <30>;
-            tap-ms = <30>;
+            tap-ms = <10>;
             bindings
                 = <&macro_tap &kp C &kp H &kp E &kp U &kp N &kp G &kp DOT &kp E &kp D &kp E &kp N &kp DOT &kp L &kp A &kp W>
                 , <&macro_press &kp LSHFT>
@@ -41,8 +40,7 @@
 
 /*
         ZMK_MACRO(macro_imwrite,
-            wait-ms = <30>;
-            tap-ms = <30>;
+            tap-ms = <10>;
             bindings
                 = <&macro_press &kp LSHFT>
                 , <&macro_tap &kp I>
@@ -178,7 +176,7 @@
 //                               | VOLD |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  |  )   |
 //                                                  | TAB | BSP | DEL |   | ESC | SPC  | ENT |
                         bindings = <
-   &trans       &kp Q      &kp W      &kp F         &kp P        &kp B         &kp J      &kp L            &kp U       &kp Y       AS(SQT)    &trans
+   &kp ESC      &kp Q      &kp W      &kp F         &kp P        &kp B         &kp J      &kp L            &kp U       &kp Y       AS(SQT)    &kp BSPC
    &kp C_VOL_UP &hm LGUI A &hm LALT R &hm LCTRL S   &hm LSHIFT T &kp G         &kp M      &hm RSHIFT N     &hm RCTRL E &hm RALT I  &hm RGUI O AS(SEMI)
    &kp C_VOL_DN &kp Z      &kp X      &kp C         &kp D        &kp V         &kp K      &kp H            AS(COMMA)   AS(DOT)     AS(FSLH)   &kp RPAR
                                     &lt MEDIA TAB &lt NUM BSPC &lt FUN DEL &lt BT ESC &lt MOUSE SPACE  &lt NAV RET 
