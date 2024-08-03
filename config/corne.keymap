@@ -28,7 +28,7 @@
 / {
     macros {
          ZMK_MACRO(macro_email,
-            tap-ms = <10>;
+            tap-ms = <5>;
             bindings
                 = <&macro_tap &kp C &kp H &kp E &kp U &kp N &kp G &kp DOT &kp E &kp D &kp E &kp N &kp DOT &kp L &kp A &kp W>
                 , <&macro_press &kp LSHFT>
@@ -46,8 +46,9 @@
                 , <&macro_tap &kp I>
                 , <&macro_release &kp LSHFT>
                 , <&macro_tap &kp A &kp M &kp SPACE &kp W &kp R &kp I &kp T &kp I &kp N &kp g &kp SPACE &kp O &kp N &kp SPACE>
-                , <&macro_tap &kp B &kp E &kp H &kp A &kp L &kp F &kp SPACE &kp O &kp F &KP SPACE>
+                , <&macro_tap &kp A &kp S>
                 , <&macro_tap &kp C &kp O &kp U &kp N &kp S &kp E &kp L &kp SPACE>
+                , <&macro_tap &kp F &kp O &kp R>
                 ;
         )
 */
@@ -171,14 +172,14 @@
 
                 DEFAULT {
 // -----------------------------------------------------------------------------------------
-//                               |  MIN |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  '  | power|
-//                               | VOLU |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |  ;   |
-//                               | VOLD |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  |  )   |
+//                               | MUTE |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  '  | snip |
+//                               | VOLU |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  | scl u|
+//                               | VOLD |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  | scl d|
 //                                                  | TAB | BSP | DEL |   | ESC | SPC  | ENT |
                         bindings = <
-   &kp ESC      &kp Q      &kp W      &kp F         &kp P        &kp B         &kp J      &kp L            &kp U       &kp Y       AS(SQT)    &kp BSPC
-   &kp C_VOL_UP &hm LGUI A &hm LALT R &hm LCTRL S   &hm LSHIFT T &kp G         &kp M      &hm RSHIFT N     &hm RCTRL E &hm RALT I  &hm RGUI O AS(SEMI)
-   &kp C_VOL_DN &kp Z      &kp X      &kp C         &kp D        &kp V         &kp K      &kp H            AS(COMMA)   AS(DOT)     AS(FSLH)   &kp RPAR
+   &kp C_MUTE   &kp Q      &kp W      &kp F         &kp P        &kp B         &kp J      &kp L            &kp U       &kp Y       AS(SQT)    &kp RG(RS(S))
+   &kp C_VOL_UP &hm LGUI A &hm LALT R &hm LCTRL S   &hm LSHIFT T &kp G         &kp M      &hm RSHIFT N     &hm RCTRL E &hm RALT I  &hm RGUI O &mwh SCROLL_UP
+   &kp C_VOL_DN &kp Z      &kp X      &kp C         &kp D        &kp V         &kp K      &kp H            AS(COMMA)   AS(DOT)     AS(FSLH)   &mwh SCROLL_DOWN
                                     &lt MEDIA TAB &lt NUM BSPC &lt FUN DEL &lt BT ESC &lt MOUSE SPACE  &lt NAV RET 
                         >;
                 };
